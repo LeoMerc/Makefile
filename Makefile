@@ -1,13 +1,18 @@
-compile: 
-	echo "Compiling... archivo"
-	gcc -Os -S -o archivo.s archivo.c
-	as -o archivo.o archivo.s
-	gcc -o archivo archivo.o
+file = archivo
+branch = main 
+commit = mensaje
+
+compile:
+	echo "Compiling... $(file)"
+	gcc -Os -S -o $(file).s $(file).c
+	as -o $(file).o $(file).s
+	gcc -o $(file) $(file).o
 comandos_git: 
 	echo "Uploading..."
 	git add .
-	git commit -m 'Commit'
-	git push origin main
+	git commit -m $(commit)
+	git push origin $(branch)
 clean: 
 	echo "Cleaning..."
-	rm -rf archivo.o archivo
+	rm -rf $(file).o $(file) $(file).s	
+
