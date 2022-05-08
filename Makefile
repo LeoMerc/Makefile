@@ -11,4 +11,4 @@ comandos_git:
 	git push origin main
 clean: 
 	echo "Cleaning..."
-	rm -rf archivo.o archivo
+	rm -rf archivo.o archivo archivo.s
