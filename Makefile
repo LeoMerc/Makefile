@@ -14,5 +14,4 @@ comandos_git:
 	git push origin $(branch)
 clean: 
 	echo "Cleaning..."
-	rm -rf $(file).o $(file) $(file).s	
-
+	rm -rf $(file).o $(file) $(file).s
